@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>3D contact form</title>
+    <meta name="description" content="A contact form with some fancy 3D effects" />
+    <meta name="keywords" content="css3, transforms, transitions, contact form, 3d" />
+    <meta name="author" content="PeHaa for PEPSized" />
+    <script src="js/modernizr.js" type="text/javascript" charset="utf-8"></script>
+
+    <!--[if IE 8]>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#contact").addClass("target");
+            $("#flip2back, #close").click(function(e){
+                $(".target").removeClass("target");
+                e.preventDefault();
+            });
+            $("#open, #flip").click(function(e){
+                var $anchor = $(this);
+                $($anchor.attr('href')).addClass("target");
+                e.preventDefault();
+            });
+        });
+    </script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <style>
+        .back {
+            text-align: center; /* Center-align the content in the middle */
+        }
+        .back p {
+            margin: 10px 0; /* Add some vertical spacing between paragraphs */
+        }
+    </style>
+</head>
+<body>
+	
+<section class="container" id="contact" >
+    <form class="flip">
+        <div class="front">
+            <h2>Från Mina och Habib</h2>
+            <p></p>
+            <p>85229 Sundsvall Sweden</p>
+            <a id="flip2back" href="#">Tryck för att öppna!</a>
+        </div>
+        <div id="content" class="back">
+            <div id="letter">
+                <div class="container">
+                    <div class="flip">
+                        <div class="front"></div>
+                        <div class="back">
+                            <p>Välkommen till Elsas fest!</p>
+                            <p>Elsa Asifi</p>
+                            <p>Lördag, Oktober 14:e</p>
+                            <p>Kl : 19.00</p>
+                            <p>Sundsvall</p>
+                            <p>Stensbergsvägen 14</p>
+                            <a id="close" href="#">Stänga</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="top">
+                <a id="flip" href="#contact">Vända</a>
+            </div>
+            <div id="lid" class="container">
+                <div class="flip">
+                    <div class="front">
+                        <div>
+                            <label for="name"></label>
+                            <input type="text"  id="name" name="name">
+                        </div>
+                        <div>
+                            <label for="mail"></label>
+                            <input type="text" id="mail" name="mail" >
+                        </div>
+                        <a id="open" href="#content">Öppna</a>
+                    </div>
+                    <div class="back"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+</body>
+</html>
