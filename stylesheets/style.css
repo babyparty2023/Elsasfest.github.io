@@ -30,10 +30,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   font-family: Satisfy, serif;
   color: #837362;
-  background: #fbf8f7; }
+  background-image: url('../images/shower.jpg'); /* Use a relative path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100vh;}
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.1em;
   line-height: 1.6; }
 
 /* links */
